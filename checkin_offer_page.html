@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Check in to get a free Coke</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #fff8f0;
+      padding: 2em;
+    }
+    h1 {
+      color: #d10000;
+    }
+    .voucher {
+      display: inline-block;
+      margin: 2em auto;
+      padding: 1em;
+      border: 2px dashed #d10000;
+      border-radius: 10px;
+      max-width: 300px;
+      background: #fff;
+    }
+    .voucher img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+    button {
+      font-size: 1.1em;
+      padding: 0.8em 1.5em;
+      margin-top: 1em;
+      border: none;
+      background-color: #d10000;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .used {
+      display: none;
+      margin-top: 1em;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Check in to get a free Coke</h1>
+  <p>Thanks for checking in to Haidilao Hot Pot Century City!</p>
+
+  <div class="voucher" id="voucher">
+    <img src="https://via.placeholder.com/300x180?text=1+Free+Coke+Voucher" alt="Free Coke Voucher">
+    <p><strong>1 Free Coke<br>Check in to receive a new dessert item!</strong></p>
+    <button onclick="markUsed()">Mark offer as used</button>
+    <div class="used" id="usedMessage">✅ Offer marked as used. Show this to your server to redeem!</div>
+  </div>
+
+  <script>
+    function markUsed() {
+      document.getElementById('voucher').querySelector('button').style.display = 'none';
+      document.getElementById('usedMessage').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
